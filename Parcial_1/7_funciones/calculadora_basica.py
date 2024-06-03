@@ -1,3 +1,5 @@
+import os 
+
 def solicitarDatos():
    print("\n")
    global n1,n2,ope
@@ -17,12 +19,14 @@ def getCalculadora(num1,num2,operacion):
         resultado=f"{num1}/{num2}={int(num1)/int(num2)}"      
     return resultado
 
+os.system("clear")
+while True:
+    print("\n\t..::: CALCULADORA BÁSICA :::... \n 1.- Suma \n 2.- Resta \n 3.-Multiplicacion \n 4.- División \n 5.- SALIR ")
+    opcion=input("\t Elige una opción: ").upper()
 
-print("\n\t..::: CALCULADORA BÁSICA :::... \n 1.- Suma \n 2.- Resta \n 3.-Multiplicacion \n 4.- División \n 5.- SALIR ")
-opcion=input("\t Elige una opción: ").upper()
-
-if opcion != 5 or opcion !="SALIR":
-    solicitarDatos()
-    print(getCalculadora(n1,n2,ope))
-else:
-    print("Calculadora Finalizada, gracias por usarla")
+    if opcion !="5" or opcion != "SALIR":
+        solicitarDatos()
+        print(getCalculadora(n1,n2,ope))
+    else:
+        opcion = False
+        print("Calculadora Finalizada, gracias por usarla")

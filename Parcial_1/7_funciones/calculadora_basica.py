@@ -1,5 +1,5 @@
 import os 
-from varias_funciones import *
+from varias_funciones import getCalculadora, esperaTecla, solicitarDatos
 
 """def esperaTecla():
     #Muestra un mensaje
@@ -26,14 +26,15 @@ def solicitarDatos():
         resultado=f"{num1}/{num2}={int(num1)/int(num2)}"      
     return resultado"""
 
-os.system("clear")
+opcion = True
 while True:
+    os.system("cls")
     print("\n\t..::: CALCULADORA BÁSICA :::... \n 1.- Suma \n 2.- Resta \n 3.-Multiplicacion \n 4.- División \n 5.- SALIR ")
     opcion=input("\t Elige una opción: ").upper()
 
     if opcion !="5" or opcion != "SALIR":
-        solicitarDatos()
-        print(getCalculadora(n1,n2,ope))
+        n1, n2 = solicitarDatos()
+        print(getCalculadora(n1,n2,opcion))
         esperaTecla()
     else:
         opcion = False

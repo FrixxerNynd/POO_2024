@@ -17,14 +17,11 @@ alumnos={
 }
 
 print(alumnos)
-
 print(alumnos["nombre"])
 
 #Agregar elementos
-
 alumnos["telefono"]=6181234567
 print(alumnos)
-
 
 #Actualizar elementos
 alumnos.update({"telefono":6182334567})
@@ -35,6 +32,5 @@ alumnos.pop("semestres")
 print(alumnos)
 
 #Recorrer el dicccionario
-
 for i in alumnos:
     print(f"{i} : {alumnos[i]}")

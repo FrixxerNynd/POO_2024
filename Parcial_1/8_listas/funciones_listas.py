@@ -54,7 +54,6 @@ while i <= len(palabras)-1:
 
 if Find:
     print("No encontre la palabra")
-
 """
 #Ejemplo 3 agregar y eliminar elementos de una lista.
 os.system("clear")
@@ -73,7 +72,8 @@ print(numeros)
 #eliminar un elemento
 numeros.remove(100) #indicar el elemento a borrar
 print(numeros)
-numeros.pop(2) #indicar la posicion del el elemento a borrar
+#indicar la posicion del el elemento a borrar
+numeros.pop(2) 
 print(numeros)
 
 

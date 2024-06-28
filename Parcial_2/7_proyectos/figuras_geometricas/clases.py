@@ -12,7 +12,7 @@ class Figuras:
         return print(f"Visibilidad: {self.visble}")
     
     def setMostrar(self):
-        print("El objeto se esta mostrando en las posiciones ´X´ = {self.x] y ´Y´ = {self.y}")
+        print(f"El objeto se esta mostrando en las posiciones 'X' = {self.x} y 'Y' = {self.y}")
 
     def setOcultar(self):
         print("El objeto se ha ocultado")
@@ -25,8 +25,8 @@ class Figuras:
 class Rectangulos(Figuras):
     def __init__(self, x, y, visible, alto, ancho):
         super().__init__(x, y, visible)
-        __self.alto = alto
-        __self.ancho = ancho
+        self.__alto = alto
+        self.__ancho = ancho
     
     def CalcularArea(self, alto, ancho):
         alto = float(input("Ingresa la altura del rectangulo: "))
@@ -37,7 +37,7 @@ class Rectangulos(Figuras):
 class Circulos(Figuras):
     def __init__(self, x, y, visible, radio):
         super().__init__(x, y, visible)
-        __self.radio = radio
+        self.__radio = radio
     
     def calcularArea(self, radio):
-        resultado = (__self.radio * 3.1416) /2
+        resultado = (radio*radio * 3.1416) /2
